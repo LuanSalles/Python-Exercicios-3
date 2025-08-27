@@ -8,3 +8,11 @@ Questao4: De jogadores_times.txt, monta {nome: time} usando a primeira virgula, 
 Questao5: Le lista_a.txt e lista_b.txt, gera lista_uniq.txt com itens unicos ordenados
 Questao6: Le texto.txt, coloca tudo em minusculas, remove pontuação basica e mostra quantidade de palavras distintas
 Questao7: Mescla lista_a.txt + lista_b.txt sem duplicatas, ordena e salva em lista_unica.txt
+
+Tratamento de erros:
+Questao1: cria notas.txt se não existir
+Questao2: mostra aviso amigavel em caso de PermissionError
+Questao3: tenta abrir em UTF-8, se falhar tenta Latin-1
+Questao4: registra linhas invalidas em linhas_invalidas.log
+Questao5/Questao7: se lista_a.txt ou lista_b.txt nao existirem, informa no terminal e segue
+Questao6: se texto.txt nao existir, mostra “Arquivo texto.txt nao encontrado”
