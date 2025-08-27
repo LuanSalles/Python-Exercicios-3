@@ -1,0 +1,3 @@
+Python é uma linguagem simples e poderosa.  
+Com Python podemos manipular arquivos, strings e exceções.  
+Aprender Python é divertido!

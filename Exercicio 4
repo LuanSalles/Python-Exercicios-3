@@ -1,0 +1,17 @@
+def questao4():
+    jogadores = {}
+    with open("linhas_invalidas.log", "w", encoding="utf-8") as log:
+        try:
+            with open("jogadores_times.txt", "r", encoding="utf-8") as f:
+                for linha in f:
+                    try:
+                        if "," in linha:
+                            nome, time = linha.split(",", 1)
+                            jogadores[nome.strip()] = time.strip()
+                        else:
+                            log.write(linha)
+                    except Exception as e:
+                        log.write(f"Erro na linha: {linha}")
+        except FileNotFoundError:
+            print("Arquivo jogadores_times.txt não encontrado")
+    print("Dicionário jogadores_times:", jogadores)

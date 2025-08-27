@@ -1,0 +1,17 @@
+def questao3():
+    conteudo = ""
+    try:
+        with open("comentarios.txt", "r", encoding="utf-8") as f:
+            conteudo = f.read()
+    except UnicodeDecodeError:
+        try:
+            with open("comentarios.txt", "r", encoding="latin-1") as f:
+                conteudo = f.read()
+        except Exception as e:
+            print("Erro ao abrir arquivo:", e)
+            return
+    
+    conteudo = conteudo.replace("  ", " ").replace("...", ".")
+    with open("comentarios_limpos.txt", "w", encoding="utf-8") as f:
+        f.write(conteudo)
+    print("Arquivo comentarios_limpos.txt criado com sucesso")

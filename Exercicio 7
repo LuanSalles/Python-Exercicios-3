@@ -1,0 +1,14 @@
+def questao7():
+    itens = set()
+    for arquivo in ["lista_a.txt", "lista_b.txt"]:
+        try:
+            with open(arquivo, "r", encoding="utf-8") as f:
+                for linha in f:
+                    itens.add(linha.strip())
+        except FileNotFoundError:
+            print(f"Aviso: {arquivo} não encontrado. Prosseguindo")
+    
+    itens_ordenados = sorted(itens)
+    with open("lista_unica.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(itens_ordenados))
+    print("Arquivo lista_unica.txt criado.")

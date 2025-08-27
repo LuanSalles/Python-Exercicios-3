@@ -1,0 +1,10 @@
+def questao1():
+    try:
+        with open ("notas.txt", "r", encoding= "utf-8") as f:
+            conteudo = f.read()
+    except FileNotFoundError:
+        with open ("notas.txt", "w", encoding= "utf-8") as f:
+            f.write ("Arquvo Criado")
+            with open ("notas.txt", "r",encoding= "utf-8") as f:
+                conteudo = f.read()
+                print("Conteudo de notas.txt:\n", conteudo)

@@ -1,0 +1,6 @@
+O céu está azul.
+
+Amanhã pode chover.
+Python é divertido.
+   
+Aprender exceções é importante.

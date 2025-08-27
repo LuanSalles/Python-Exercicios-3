@@ -1,0 +1,13 @@
+import string
+def questao6():
+    try:
+        with open("texto.txt", "r", encoding="utf-8") as f:
+            conteudo = f.read().lower()
+    except FileNotFoundError:
+        print("Arquivo texto.txt nao encontrado")
+        return
+    
+    for p in string.punctuation:
+        conteudo = conteudo.replace(p, " ")
+    palavras = set(conteudo.split())
+    print(f"Quantidade de palavras unicas: {len(palavras)}")
